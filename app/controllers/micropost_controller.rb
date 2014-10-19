@@ -1,4 +1,4 @@
-class MicropostController < ActionController::Base
+class MicropostController < ApplicationController
   def index
     @microposts = Micropost.all.sort.reverse
   end
