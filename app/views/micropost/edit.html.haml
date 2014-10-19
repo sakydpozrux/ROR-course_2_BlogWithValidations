@@ -1,8 +1,8 @@
-%h1 New Micropost
+%h1 Edit Micropost
 
 %h4=link_to '<-- Back to listing', micropost_index_path
 
-= form_for @micropost, url: { action: 'create' }, method: :post do |f|
+= form_for @micropost, url: { action: 'update' }, method: :patch do |f|
   - if @micropost.errors.any?
     %h2
       = pluralize(@micropost.errors.count, 'error')

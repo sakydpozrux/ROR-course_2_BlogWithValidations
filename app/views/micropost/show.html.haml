@@ -1,0 +1,16 @@
+%h2 Micropost:
+
+%h4=link_to '<-- Back to listing', micropost_index_path
+
+%table
+  %th
+    %tr
+      %th Title
+      %th Content
+      %th
+      %th
+    %tr
+      %td= @micropost.title
+      %td= @micropost.content
+      %td= link_to 'Edit', edit_micropost_path(@micropost)
+      %td= link_to 'Remove', micropost_path(@micropost), method: :delete, data: { confirm: 'Are you sure?' }
